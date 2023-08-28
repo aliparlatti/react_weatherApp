@@ -19,6 +19,7 @@ const WeatherLocalStorageService = {
                 savedAddresses.push(JSON.parse(addressData));
             }
         }
+
         return savedAddresses;
     },
     removeWeatherLocalStorage: (resolvedAddress: string) => {

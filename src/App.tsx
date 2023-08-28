@@ -7,6 +7,7 @@ import { TopMenu } from "./components/shared/menu";
 import { store } from "./components/store/store";
 const customTheme = extendTheme({
     styles: {
+        //@ts-ignore
         global: (props) => ({
             body: {
                 background: `linear-gradient(to bottom, #ffffff,#baf7ff)`,

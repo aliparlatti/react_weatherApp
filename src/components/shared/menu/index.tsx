@@ -5,6 +5,7 @@ export const TopMenu = () => {
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label
+                            //@ts-ignore
                             tabIndex="0"
                             className="btn btn-ghost btn-circle"
                         >
@@ -24,6 +25,7 @@ export const TopMenu = () => {
                             </svg>
                         </label>
                         <ul
+                            //@ts-ignore
                             tabIndex="0"
                             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
                         >

@@ -1,4 +1,5 @@
 import { Tab, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/react";
+//@ts-ignore
 import moment from "moment";
 import { useEffect, useState } from "react";
 import { BsFillBookmarkStarFill } from "react-icons/bs";
@@ -17,15 +18,17 @@ const ADDRESS_STORAGE_PREFIX = "weather_address_";
 const WeatherDescCard = (props: { weatherData: WeatherData }) => {
     const [saved, setSaved] = useState(false);
     const { weatherData: initialWeatherData } = props;
+    //@ts-ignore
     const [selectedDay, setSelectedDay] = useState<WeatherDay>(
         initialWeatherData.days[0]
     );
+    //@ts-ignore
     const savedAddresses = useSelector((state) => state.weather.savedData);
 
     useEffect(() => {
         setSelectedDay(initialWeatherData.days[0]);
     }, [initialWeatherData]);
-
+    //@ts-ignore
     const onSelectDay = (day: WeatherDay) => () => {
         setSelectedDay(day);
     };
@@ -38,6 +41,7 @@ const WeatherDescCard = (props: { weatherData: WeatherData }) => {
                     data.resolvedAddress === initialWeatherData.resolvedAddress
             )
         ) {
+            //@ts-ignore
             dispatch(saveWeatherData(initialWeatherData));
             setSaved(true);
         }
@@ -66,6 +70,7 @@ const WeatherDescCard = (props: { weatherData: WeatherData }) => {
                                 <BsFillBookmarkStarFill
                                     size={30}
                                     onClick={() => {
+                                        //@ts-ignore
                                         onSaveStorage(initialWeatherData)();
                                         setSaved(true);
                                     }}

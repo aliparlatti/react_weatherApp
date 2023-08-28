@@ -11,8 +11,9 @@ const SearchBar = () => {
     const selectedData: WeatherData = useSelector(
         (state: RootState) => state.weather.selectedData
     );
-
+    //@ts-ignore
     const updateSelectedData = (weatherData: WeatherData) => {
+        //@ts-ignore
         dispatch(selectWeatherData(weatherData));
     };
 

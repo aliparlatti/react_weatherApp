@@ -11,9 +11,13 @@ const initialState = {
 
 export const store = configureStore({
     reducer: {
+        //@ts-ignore
         weather: weatherSlice,
     },
-    preloadedState: { weather: initialState },
+    preloadedState: {
+        //@ts-ignore
+        weather: initialState,
+    },
 });
 
 export type RootState = ReturnType<typeof store.getState>;

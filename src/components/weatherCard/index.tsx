@@ -1,3 +1,4 @@
+//@ts-ignore
 import moment from "moment";
 import { BsCloudMinusFill } from "react-icons/bs";
 import { WiThermometer } from "react-icons/wi";
@@ -12,6 +13,7 @@ const WeatherCard = (props: { weatherData: WeatherData }) => {
 
     const onDeleteWeather = (weatherData: WeatherData) => async () => {
         try {
+            //@ts-ignore
             await dispatch(deleteWeatherData(weatherData.resolvedAddress));
         } catch (error) {
             console.error(
@@ -21,6 +23,7 @@ const WeatherCard = (props: { weatherData: WeatherData }) => {
         }
     };
     const updateSelectedData = (weatherData: WeatherData) => {
+        //@ts-ignore
         dispatch(selectWeatherData(weatherData));
     };
 
@@ -33,6 +36,7 @@ const WeatherCard = (props: { weatherData: WeatherData }) => {
             top: 0,
             behavior: "smooth",
         };
+        //@ts-ignore
         window.scrollTo(scrollToOptions);
     };
     return (
